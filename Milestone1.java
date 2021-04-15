@@ -1,14 +1,16 @@
 package milestone1;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class Milestone1 {
 	// Nivell 1
 	
 	/* Fase 1
-		Crea tres variables string e inicialítza-les amb les dades pertinents (nom, cognom1, cognom2).
-		Crea tres variables int e inicialítza-les amb les dades pertinents (dia, mes, any).
+		Crea tres variables string e inicialÃ­tza-les amb les dades pertinents (nom, cognom1, cognom2).
+		Crea tres variables int e inicialÃ­tza-les amb les dades pertinents (dia, mes, any).
 		Mostra per pantalla les variables string concatenant-les en aquest ordre (cognom1 + cognom2, + nom).
-		Mostra per pantalla les variables int concatenant-les amb “/” entre cada una d’elles	
+		Mostra per pantalla les variables int concatenant-les amb â€œ/â€ entre cada una dâ€™elles	
 	*/
 	
 	/*public static void main(String[] args) {
@@ -22,11 +24,11 @@ public class Milestone1 {
 		System.out.print("Introduce tu segundo apellido: ");
 		surname2 = reader2.next();
 		String fullName = name + " " + surname1 + " " + surname2;
-		System.out.print("Introduce el día de tu nacimiento: ");
+		System.out.print("Introduce el dÃ­a de tu nacimiento: ");
 		day = reader2.nextInt();
 		System.out.print("Introduce el mes de tu nacimiento: ");
 		month = reader2.nextInt();
-		System.out.print("Introduce el año de tu nacimiento: ");
+		System.out.print("Introduce el aÃ±o de tu nacimiento: ");
 		year = reader2.nextInt();
 		String fullDate = day + "/" + month + "/" + year;
 		System.out.print("Tu nombre es " + fullName + " y naciste en la fecha " + fullDate);
@@ -34,11 +36,11 @@ public class Milestone1 {
 	
 	
 	/* Fase 2
-	   Sabent que l’any 1948 es un any de traspàs:
-		Creeu una constant amb el valor de l’any (1948).
-		Creeu una variable que guardi cada quan hi ha un any de traspàs.
-		Calculeu quants anys de traspàs hi ha entre 1948 i el vostre any de naixement i emmagatzemeu el valor resultant en una variable.
-		Mostreu per pantalla el resultat del càlcul.
+	   Sabent que lâ€™any 1948 es un any de traspÃ s:
+		Creeu una constant amb el valor de lâ€™any (1948).
+		Creeu una variable que guardi cada quan hi ha un any de traspÃ s.
+		Calculeu quants anys de traspÃ s hi ha entre 1948 i el vostre any de naixement i emmagatzemeu el valor resultant en una variable.
+		Mostreu per pantalla el resultat del cÃ lcul.
 	
 	
 	public static void main(String[] args) {
@@ -46,19 +48,19 @@ public class Milestone1 {
 		final int anyTraspas = 1948;
 		int numAnysTraspas = 4;
 		int anyUser;
-		System.out.print("Introduce tu año de nacimiento: ");
+		System.out.print("Introduce tu aÃ±o de nacimiento: ");
 		anyUser = reader2.nextInt();
 		int numTraspassos = (anyUser - anyTraspas)/numAnysTraspas;		
-		System.out.print("Desde 1948 hasta que tú naciste en " + anyUser + " hubieron " + numTraspassos + " años bisiestos.");
+		System.out.print("Desde 1948 hasta que tÃº naciste en " + anyUser + " hubieron " + numTraspassos + " aÃ±os bisiestos.");
 	}
 	*/
 	
 	
 	
 	/* Fase 3
-	   Partint de l’any 1948 heu de fer un bucle for i mostrar els anys de traspàs fins arriba al vostre any de naixement. 
-		ATENCIO! Haureu de canviar el tipus de variable de l’any 1948 per poder modificar-la. 
-		Creeu una variable boolean que serà certa si l’any de naixement és de traspàs o falsa si no ho és.
+	   Partint de lâ€™any 1948 heu de fer un bucle for i mostrar els anys de traspÃ s fins arriba al vostre any de naixement. 
+		ATENCIO! Haureu de canviar el tipus de variable de lâ€™any 1948 per poder modificar-la. 
+		Creeu una variable boolean que serÃ  certa si lâ€™any de naixement Ã©s de traspÃ s o falsa si no ho Ã©s.
 		En cas de que la variable boolean sigui certa, heu de mostrar per consola una frase on ho digui, en cas de 
 		ser falsa mostrareu la frase pertinent.
 		Creeu dues variables string per guardar les frases.
@@ -69,7 +71,7 @@ public class Milestone1 {
 		int anyTraspas = 1948;
 		int numAnysTraspas = 4;
 		int anyUser;
-		System.out.print("Introduce tu año de nacimiento: ");
+		System.out.print("Introduce tu aÃ±o de nacimiento: ");
 		anyUser = reader2.nextInt();
 		int numTraspassos = (anyUser - anyTraspas)/numAnysTraspas;
 		String anysTraspassos = "";
@@ -78,15 +80,15 @@ public class Milestone1 {
 			anyTraspas = anyTraspas + 4;
 			anysTraspassos += (anyTraspas + " ");
 		}
-		System.out.print("Desde 1948 hasta tu año de nacimiento, " + anyUser + ", ha habido los siguientes años bisiestos:" + "\n" + anysTraspassos + "\n");
+		System.out.print("Desde 1948 hasta tu aÃ±o de nacimiento, " + anyUser + ", ha habido los siguientes aÃ±os bisiestos:" + "\n" + anysTraspassos + "\n");
 		Boolean checkTraspas;
 		String resultCheck = "";
 		if (anyTraspas == anyUser) {
 			checkTraspas = true;
-			resultCheck = "Tu año de nacimiento, " + anyUser + ", fue un año bisiesto.";
+			resultCheck = "Tu aÃ±o de nacimiento, " + anyUser + ", fue un aÃ±o bisiesto.";
 		} else {
 			checkTraspas = false;
-			resultCheck = "Tu año de nacimiento, " + anyUser + ", no fue un año bisiesto.";
+			resultCheck = "Tu aÃ±o de nacimiento, " + anyUser + ", no fue un aÃ±o bisiesto.";
 		}
 		System.out.print(checkTraspas + ": ");
 		System.out.print(resultCheck);
@@ -97,12 +99,12 @@ public class Milestone1 {
 	
 	/* Fase 4
 	 *  Creeu una variable on juntareu el nom i els cognoms (tot en una variable) i un altre on juntareu la 
-		data de naixement separada per “/” (tot en una variable). 
-		Mostreu per consola les variables del nom complet, la data de naixement i si l’any de naixement es de traspàs o no.
+		data de naixement separada per â€œ/â€ (tot en una variable). 
+		Mostreu per consola les variables del nom complet, la data de naixement i si lâ€™any de naixement es de traspÃ s o no.
 		Exemple de sortida per consola:
-			El meu nom és Juan Perez Gonzalez
-			Vaig néixer el 01/01/1979
-			El meu any de naixement és de traspàs.
+			El meu nom Ã©s Juan Perez Gonzalez
+			Vaig nÃ©ixer el 01/01/1979
+			El meu any de naixement Ã©s de traspÃ s.
 	
 	
 	public static void main(String[] args) {
@@ -116,11 +118,11 @@ public class Milestone1 {
 		System.out.print("Introduce tu segundo apellido: ");
 		surname2 = reader2.next();
 		String fullName = name + " " + surname1 + " " + surname2;
-		System.out.print("Introduce el día de tu nacimiento: ");
+		System.out.print("Introduce el dÃ­a de tu nacimiento: ");
 		day = reader2.nextInt();
 		System.out.print("Introduce el mes de tu nacimiento: ");
 		month = reader2.nextInt();
-		System.out.print("Introduce el año de tu nacimiento: ");
+		System.out.print("Introduce el aÃ±o de tu nacimiento: ");
 		year = reader2.nextInt();
 		String fullDate = day + "/" + month + "/" + year;
 		
@@ -139,10 +141,10 @@ public class Milestone1 {
 		String resultCheck = "";
 		if (anyTraspas == anyUser) {
 			checkTraspas = true;
-			resultCheck = "Mi año de nacimiento, " + anyUser + ", fue un año bisiesto.";
+			resultCheck = "Mi aÃ±o de nacimiento, " + anyUser + ", fue un aÃ±o bisiesto.";
 		} else {
 			checkTraspas = false;
-			resultCheck = "Mi año de nacimiento, " + anyUser + ", no fue un año bisiesto.";
+			resultCheck = "Mi aÃ±o de nacimiento, " + anyUser + ", no fue un aÃ±o bisiesto.";
 		}
 		System.out.print("Mi nombre es " + fullName + "." + "\n");
 		System.out.print("Mi fecha de nacimiento es " + fullDate + "." + "\n");
@@ -172,12 +174,13 @@ public class Milestone1 {
 	
 	// Nivell 3
 	/* Declara un array de numeros int e inicialitzala amb valors del 1 al 10
-		Rota l’array sense utilitzar un array auxiliar ni llibreries. Pots utilizar una variable auxiliar.
+		Rota lâ€™array sense utilitzar un array auxiliar ni llibreries. Pots utilizar una variable auxiliar.
 	*/
 	
 	public static void main(String[] args) {
-		int[] myArray = {1,2,3,4,5,6,7,8,9,10};
-		for(int i=myArray.length-1; i>=0; i--) {
+		Integer myArray[] = {1,2,3,4,5,6,7,8,9,10};
+		Collections.rotate(Arrays.asList(myArray), 1);
+		for(int i=0; i<=myArray.length-1; i++) {
 			System.out.print(myArray[i] + " ");
 		}
 	}
